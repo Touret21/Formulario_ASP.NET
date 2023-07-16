@@ -1,0 +1,12 @@
+# ASP.NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.user
+*.bak
+
+# Dependencias
+node_modules/
+packages/

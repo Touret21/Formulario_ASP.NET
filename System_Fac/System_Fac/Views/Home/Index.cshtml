@@ -1,0 +1,155 @@
+﻿@using System_Fac.APP_Code
+@model System_Fac.Models.FormularioViewModel
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Vista PDF</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/estilos.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+    @section styles{
+        <link rel="stylesheet" href="@Href("~/css/estilos.css")" />
+    }
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+
+
+<body style="background-color: #DCDCDC">
+    <br />
+    <div class="cont">
+        <div class="mx-auto" style="width: 800px; background-color:white">
+            <div class="container">
+                <div class="contact__wrapper shadow-lg mt-n9">
+                    <div class="row no-gutters">
+                        <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
+                            <h3 class="color--white mb-5">FACTURACIÓN</h3>
+
+
+
+                            <figure class="figure position-absolute m-0 opacity-06 z-index-100" style="bottom:0; right: 10px">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="444px" height="626px">
+                                    <defs>
+                                        <linearGradient id="PSgrad_1" x1="0%" x2="81.915%" y1="57.358%" y2="0%">
+                                            <stop offset="0%" stop-color="rgb(255,255,255)" stop-opacity="1"></stop>
+                                            <stop offset="100%" stop-color="rgb(0,54,207)" stop-opacity="0"></stop>
+                                        </linearGradient>
+
+                                    </defs>
+                                    <path fill-rule="evenodd" opacity="0.302" fill="rgb(72, 155, 248)" d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z"></path>
+                                    <path fill="url(#PSgrad_1)" d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z"></path>
+                                </svg>
+                            </figure>
+                        </div>
+
+                        <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+                            <center>
+                                <img id="logo" src="~/Imgs/logo.jpg" class="img-responsive" style="width:120px; height:120px" />
+                            </center>
+                            @if (ViewBag.ErrorMessage != null)
+                            {
+                                <div id="errorMessage" class="alert alert-danger">
+                                    @ViewBag.ErrorMessage
+                                </div>
+                            }
+                            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                            {
+                                <form action="@Url.Action("Index", "Home")" class="contact-form form-validate" novalidate="novalidate">
+                                    <div class="row">
+                                        <div class="col-sm-12 mb-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="required-field" for="firstName">RUC Emisor</label>
+                                                <input required type="number" class="form-control" id="RUC" name="RUC" placeholder="Ej:FXXX-000000" maxlength="11" value="@Model.RUC">
+                                                <div id="rucError" style="display: none; color: red;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 mb-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="tipo">Tipo de Documento</label>
+                                                <select required class="form-control" id="tipo" name="tipo">
+                                                    <option value="" disabled selected hidden>-SELECCIONE-</option>
+                                                    <option @Html.Selected(Model.Tipo, "Factura")>Factura</option>
+                                                    <option @Html.Selected(Model.Tipo, "Boleta")>Boleta</option>
+                                                    <option @Html.Selected(Model.Tipo, "Nota de Crédito")>Nota de Crédito</option>
+                                                    <option @Html.Selected(Model.Tipo, "Nota de Débito")>Nota de Débito</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 mb-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="required-field" for="email">Folio del Documento</label>
+                                                <input autocomplete="off" required type="text" class="form-control" id="folio" name="folio" placeholder="Ej:FXXX-000000" value="@Model.Folio">
+                                                <div id="folioError" style="display: none; color: red;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 mb-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="fecha">Fecha Emisión</label>
+                                                <input required type="date" class="form-control" id="fecha" name="fecha" value="@Model.Fecha">
+                                                <div id="fechaError" style="display: none; color: red;"></div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-sm-6 mb-3 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="phone">Monto Total</label>
+                                                <input required type="number" step="0.01" class="form-control" id="monto" name="montototal" placeholder="Ej:5678999.01" value="@Model.MontoTotal">
+                                            </div>
+                                            <div id="montoTotalError" style="display: none; color: red;"></div>
+                                        </div>
+
+
+
+                                        <div class="col-sm-12 mb-3 col-xs-12">
+                                            <!-- Mostrar el mensaje de error -->
+                                            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                                            {
+                                                <div class="alert alert-danger">@Model.ErrorMessage</div>
+                                            }
+                                        </div>
+
+                                        <div id="captcha-container" class="col-sm-12 mb-3 col-xs-12">
+                                            <div class="g-recaptcha" data-sitekey="6LcUoU8mAAAAAJITMnUJ-obuUnUUNngHDRyqMlsY" data-callback="captchaCallback"></div>
+                                        </div>
+
+                                        <div class="col-sm-12 mb-3 col-xs-12">
+                                            <center>
+                                                <button type="submit" id="boton" name="viewDocument" class="btn btn-primary">VER DOCUMENTO <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                            </center>
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            }
+
+                        </div>
+                    </div>
+                    <!-- End Contact Form Wrapper -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/Index.js"></script>
+    <script src="~/js/js.js"></script>
+</body>
+
+</html>

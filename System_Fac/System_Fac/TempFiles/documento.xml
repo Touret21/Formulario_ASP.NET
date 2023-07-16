@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><Signature Id="SFC02-0000001" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>WSnlqOQz7d7zOBqV41rHUCAtmaQ=</DigestValue></Reference></SignedInfo><SignatureValue>iWN9mtG26wvVSwS0uj/gJM6Lhr5Slqt8g92P01jV/A5maqwRW1jwHtmOujLfMLbX8oISkqAJk3ahtuacthq8YTjvI8AnHRweD19B7hmHg3RSTucOSXdlZJOE1I8tSNyzuNCy7SKcJc0M1Ik5K4f5gXi+m1nqfj6UIXrZf8O8R5AchD4TED16P4MjYjhoImsBMhcY1Md2KmIelYvlpKzBsF0LIGMGz3ql9yMCPkIXJSt+xB/bqRl15t61X/Ee5/miKPXdyqhH0irHqLHUTYH2AZxL78hfSzpnXqUsSv0tyOqU7LaeAREMhUbp0MEu2P/1Nd3BtWMX8zfCT7pZ2TbFwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=PE, O=SUPER TRUCK S.A.C., OID.2.5.4.97=20600542258, OU=Issued by DIGITAL SECURITY NETWORK SAC [PE1], OU=20600542258, T=GERENTE GENERAL, S=LIMA - LIMA, L=VILLA EL SALVADOR, SERIALNUMBER=DNI:46366626, SN=KIYAN OSHIRO, G=RICHARD, CN=RICHARD KIYAN OSHIRO, E=facturacion@pumpmix.pe</X509SubjectName><X509Certificate>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</X509Certificate></X509Data></KeyInfo></Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>2.0</cbc:CustomizationID>
+  <cbc:ProfileID schemeName="SUNAT:Identificador de Tipo de Operación" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo17">0101</cbc:ProfileID>
+  <cbc:ID>FC02-0000001</cbc:ID>
+  <cbc:IssueDate>2018-12-31</cbc:IssueDate>
+  <cbc:IssueTime>00:00:00</cbc:IssueTime>
+  <cbc:InvoiceTypeCode listID="0101">01</cbc:InvoiceTypeCode>
+  <cbc:Note languageLocaleID="2006"><![CDATA[Operación sujeta a detracción]]></cbc:Note>
+  <cbc:DocumentCurrencyCode listID="ISO 4217 Alpha" listName="Currency" listAgencyName="United Nations Economic Commission for Europe">PEN</cbc:DocumentCurrencyCode>
+  <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+  <cac:Signature>
+    <cbc:ID>SFC02-0000001</cbc:ID>
+    <cac:SignatoryParty>
+      <cac:PartyIdentification>
+        <cbc:ID>20600542258</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>RENTALMIX S.A.C.</cbc:Name>
+      </cac:PartyName>
+    </cac:SignatoryParty>
+    <cac:DigitalSignatureAttachment>
+      <cac:ExternalReference>
+        <cbc:URI>SFC02-0000001</cbc:URI>
+      </cac:ExternalReference>
+    </cac:DigitalSignatureAttachment>
+  </cac:Signature>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeID="6">20600542258</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name><![CDATA[RENTALMIX S.A.C.]]></cbc:Name>
+      </cac:PartyName>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[RENTALMIX S.A.C.]]></cbc:RegistrationName>
+        <cac:RegistrationAddress>
+          <cbc:AddressTypeCode>0000</cbc:AddressTypeCode>
+          <cbc:CityName><![CDATA[LIMA]]></cbc:CityName>
+          <cbc:CountrySubentity><![CDATA[LIMA]]></cbc:CountrySubentity>
+          <cbc:District><![CDATA[VILLA EL SALVADOR]]></cbc:District>
+          <cac:AddressLine>
+            <cbc:Line><![CDATA[CAR.PANAMERICANA SUR KM. 17.5 MZA. C LOTE. 04 ASC. LA CONCORDIA (PARADERO LA CAPILLA) LIMA - LIMA - VILLA EL SALVADOR]]></cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeID="6">20380289360</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[MIXERCON S.A]]></cbc:RegistrationName>
+        <cac:RegistrationAddress>
+          <cac:AddressLine>
+            <cbc:Line><![CDATA[CAR. PANAMERICANA SUR KM.17.5 MZA. C    LOTE. 4      ASOCIACION LA CONCORDIA (PARADERO LA CAPILLA KM 17.5 PAN-SUR) LIMA LIMA VILLA EL SALVADOR]]></cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>001</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>00013058229</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">2764.44</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="PEN">15358.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="PEN">2764.44</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID schemeID="UN/ECE 5305" schemeName="Tax Category Identifier" schemeAgencyName="United Nations Economic Commission for Europe">S</cbc:ID>
+        <cac:TaxScheme>
+          <cbc:ID>1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="PEN">15358.00</cbc:LineExtensionAmount>
+    <cbc:TaxInclusiveAmount currencyID="PEN">18122.44</cbc:TaxInclusiveAmount>
+    <cbc:AllowanceTotalAmount currencyID="PEN">0.00</cbc:AllowanceTotalAmount>
+    <cbc:ChargeTotalAmount currencyID="PEN">0.00</cbc:ChargeTotalAmount>
+    <cbc:PayableAmount currencyID="PEN">18122.44</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU" unitCodeListID="UN/ECE rec 20" unitCodeListAgencyName="United Nations Economic Commission for Europe">548.50</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="PEN">15358.00</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="PEN">33.04</cbc:PriceAmount>
+        <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="PEN">2764.44</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxableAmount currencyID="PEN">15358.00</cbc:TaxableAmount>
+        <cbc:TaxAmount currencyID="PEN">2764.44</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:ID schemeID="UN/ECE 5305" schemeName="Tax Category Identifier" schemeAgencyName="United Nations Economic Commission for Europe">S</cbc:ID>
+          <cbc:Percent>18.00</cbc:Percent>
+          <cbc:TaxExemptionReasonCode>10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID>1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[BOMBA CONCRETERA]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID>SB01</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:CommodityClassification>
+        <cbc:ItemClassificationCode listID="UNSPSC" listAgencyName="GS1 US" listName="Item Classification">72141701</cbc:ItemClassificationCode>
+      </cac:CommodityClassification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="PEN">28.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

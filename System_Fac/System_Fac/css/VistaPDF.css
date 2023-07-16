@@ -1,0 +1,33 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#pdf-container {
+    width: 100%;
+    height: 90vh;
+    border: 1rem solid rgba(0,0,0,.5);
+}
+
+#logo {
+    width: 100px;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttons {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.options {
+    margin: auto 10px;
+}

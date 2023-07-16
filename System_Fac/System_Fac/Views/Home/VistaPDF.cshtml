@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VistaPDF</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/css/VistaPDF.css" />
+    <script src="~/PDFObject-master/pdfobject.js"></script> <!-- Reemplaza "ruta/hacia/" con la ruta correcta hacia pdfobject.js -->
+</head>
+<body>
+    <header>
+        <img id="logo" src="~/Imgs/logo.jpg" />
+
+        <div id="buttons">
+            <button class="options btn btn-outline-secondary" onclick="window.location.href='@Url.Action("Index", "Home")'"><i class="fa fa-angle-left" aria-hidden="true"></i>  Volver</button>
+            <button class="options btn btn-primary" onclick="location.href='@Url.Action("DownloadPDF", "Home")'">Descargar PDF</button>
+            <button class="options btn btn-primary" onclick="location.href='@Url.Action("DownloadXML", "Home")'">Descargar XML</button>
+            <button class="options btn btn-primary" onclick="location.href='@Url.Action("DownloadCDR", "Home")'">Descargar CDR</button>
+        </div>
+    </header>
+
+    <div id="pdf-container"></div> <!-- Elemento div donde se mostrará el PDF -->
+
+    <script>
+        window.onload = function () {
+        PDFObject.embed("@ViewBag.VirtualPath", "#pdf-container");
+        };
+    </script>
+
+    <script src="~/js/js.js"></script>
+</body>
+</html>

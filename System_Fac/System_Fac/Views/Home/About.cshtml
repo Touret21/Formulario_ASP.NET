@@ -1,0 +1,43 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Bootstrap 4 Login Form</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-3 form-horizontal">
+            <form action="/Home/Index" method="post">
+                <br />
+                <input type="text" class="form-control" name="usr" placeholder="Usuario" required autofocus>
+                <br />
+                <input type="password" class="form-control" name="pwd" placeholder="Contraseña" required>
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Iniciar sesión
+                </button>
+                <label class="checkbox pull-right">
+                    <input type="checkbox" name="rme">
+                    <label>Recordarme</label>
+                </label>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
